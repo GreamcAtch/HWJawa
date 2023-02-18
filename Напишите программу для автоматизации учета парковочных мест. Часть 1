@@ -14,3 +14,22 @@ public class Main
             thirdPlace.toString();
     }
 }
+
+public class ParkingPlace
+{
+    int number;
+
+    String isOccupied;
+
+    ParkingPlace ( int number, String isOccupied)
+    {
+        this.number = number;
+        this.isOccupied = isOccupied;
+    }
+
+    public String toString()
+    {
+        System.out.println( "Parking Place:" + " " + number + " " + "is" + " " + isOccupied);
+        return null;
+    }
+}
