@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите текст:");
+        String sentensis = scanner.nextLine();                              // Пользователь вводите текст
+
+        System.out.println("Введите слово которое необходимо удалить: ");    // Пользователь вводит удаляемое слово
+
+        String wordDelit = scanner.next();
+
+
+        int startFistIndex = sentensis.indexOf(wordDelit);                // Находим первый символ удаляемого слова в предложении
+
+        String startNewText = sentensis.substring(0, startFistIndex);
+        String finishNewText = sentensis.substring(startFistIndex+ wordDelit.length(),sentensis.length());
+        String newText = startNewText + finishNewText;
+
+        System.out.println("Результат: " + " " + newText);
+
+    }
+}
