@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Введите текущее время от 0 до 23:");
+        int time = scanner.nextInt();
+
+        if (time < 0 || time > 23)
+        {
+            System.out.println();
+            System.out.println("Вы ввесли не верный формат времени");
+            return;
+        }
+
+        System.out.println();
+        System.out.println("Введите текущий день недели:");
+        String dayOfWeek = scanner.next();
+
+        System.out.println();
+        System.out.println("Включена ли сигнализация:");
+        boolean signaling = scanner.nextBoolean();
+
+        if(signaling==false)
+        {
+            if (dayOfWeek.equalsIgnoreCase("Суббота") || dayOfWeek.equalsIgnoreCase("Воскресенье") || dayOfWeek.equalsIgnoreCase("Saturday") || dayOfWeek.equalsIgnoreCase("Sunday")) {
+                if (time == 11)
+                {
+                    System.out.println();
+                    System.out.println("Поднять шторы");
+                }
+            }
+            else
+            {
+                if (time==8)
+                {
+                    System.out.println();
+                    System.out.println("Поднять шторы");
+                }
+                if (time == 20)
+                {
+                    System.out.println();
+                    System.out.println("Включить чайник");
+                }
+            }
+        }
+        else {
+            System.out.println();
+            System.out.println("Сигнализация включена");
+        }
+
+    }
+}
