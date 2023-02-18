@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        //Напишите программу, переводящую градусы Цельсия в градусы по Фаренгейту.
+        //Значение температуры в градусах Цельсия вводится с клавиатуры.
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println();
+        System.out.print("Введите с клавиатуры тепмературу в градусах Цельсия: ");
+        int temper = scanner.nextInt();
+
+
+        int result = ((temper * 9/5) + 32);
+        System.out.println();
+        System.out.println("Градусы Цельсия в градусах по Фаренгейту:" + " " + result + "°F");
+
+    }
+}
