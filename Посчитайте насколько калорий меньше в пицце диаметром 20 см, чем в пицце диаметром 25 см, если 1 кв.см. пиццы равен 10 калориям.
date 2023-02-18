@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main
+{
+        //Посчитайте насколько калорий меньше в пицце диаметром 20 см, чем в пицце диаметром 25 см, если 1 кв.см. пиццы равен 10 калориям.
+        //Алгоритм решения:
+        //1) Создать метод calculateArea с параметром diameter (диаметр), рассчитывающий и возвращающий площадь круга.
+        //2) Создайте метод calculatePizzaCalories с параметрами diameter (диаметр) и caloriesInSquareSm (кол-во калорий в квадратном сантиметре пиццы), рассчитывающий количество калорий в пицце указанного диаметра. Для расчета площади окружности метод calculatePizzaCalories должен вызывать метод calculateArea.
+        //3) В теле метода main создайте константу caloriesInSquareSmOfPizza, содержащую значение кол-ва калорий в одном кв.см. пиццы.
+        //4) В теле метода main вызовите метод calculatePizzaCalories дважды - для расчета кол-ва калорий для пиццы диаметром 20 см и диаметром 25 см.
+        //5) Вычислите разность между полученными значениями.
+        //6) Выведите результат на экран.
+
+         static double calculateArea (double diameter)
+        {
+            double result = Math.PI * (diameter*diameter)/4;
+            return result;
+        }
+
+          static double calculatePizzaCalories( double caloriesInSquareSm, double calculateArea)
+        {
+            double result = caloriesInSquareSm * calculateArea;
+            return result;
+        }
+
+    public static void main(String[] args)
+        {
+            final double calculatePizzaCalories = 10;
+            int pizzaOne = 25;
+            int pizzaTwo = 20;
+            double diameterPizzaOne = calculateArea (pizzaOne);
+            double diameterPizzaTwo = calculateArea(pizzaTwo);
+
+            double printResultOne = calculatePizzaCalories (calculatePizzaCalories, diameterPizzaOne);
+            /*System.out.println();
+            System.out.println("Количество калорий в пицце 25 см.: " +" " + printResultOne);*/
+
+            double printResultTwo = calculatePizzaCalories (calculatePizzaCalories, diameterPizzaTwo);
+            /*System.out.println();
+            System.out.println("Количество калорий в пицце 20 см.: " + " " + printResultTwo);*/
+
+            double result = printResultOne - printResultTwo;
+
+            System.out.println();
+            System.out.println("В пицце диаметром 20 см. на  " +  result + " " + "калорий меньше чем в пицце 25 см.");
+
+
+        }
+}
