@@ -1,0 +1,16 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+            ParkingPlace firstPlace = new ParkingPlace(21, "Busy");
+            ParkingPlace secondPlace = new ParkingPlace(12, "Free");
+            ParkingPlace thirdPlace = new ParkingPlace(16, "Busy");
+
+            System.out.println("----------------------------");
+            firstPlace.toString();
+            System.out.println("----------------------------");
+            secondPlace.toString();
+            System.out.println("----------------------------");
+            thirdPlace.toString();
+    }
+}
