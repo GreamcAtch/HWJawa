@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите слово которое необходимо перевести:");
+        String text = scanner.nextLine();
+        String translateTaxt = "";
+        System.out.println();
+
+        switch (text) {
+            case "Привет":
+                translateTaxt = "Hello!";
+                System.out.println("Перевод слова" + " - " + translateTaxt);
+                break;
+            case "Дом":
+                translateTaxt = "Home!";
+                System.out.println("Перевод слова" + " - " + translateTaxt);
+                break;
+            case "Цвет":
+                translateTaxt = "Color!";
+                System.out.println("Перевод слова" + " - " + translateTaxt);
+                break;
+            case "Неделя":
+                translateTaxt = "Week!";
+                System.out.println("Перевод слова" + " - " + translateTaxt);
+                break;
+            default:
+                System.out.println("Перевод слова" + " " + "/" + text + "/" + " " + "отсутствует в словаре");
+                break;
+        }
+    }
+}
