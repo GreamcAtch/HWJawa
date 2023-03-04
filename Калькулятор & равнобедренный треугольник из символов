@@ -1,0 +1,80 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) throws Exception
+    {
+        //  Калькулятор суммирует числа до тех пор, пока пользователь не введет знак =,
+        //  после этого выводит результат на экран и заканчивает работу.
+        //  Добавьте в калькулятор возможность вводить знак математической операции,
+        //  которая будет выполняться над следующим аргументом.
+/*        int number, number2;
+        char sing;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите первое число >");
+        number = scanner.nextInt();
+        int result = number;
+        do {
+
+            do {
+                System.out.println("Введите знак опарации");
+                sing = scanner.next().charAt(0);
+            } while (sing != '+' && sing != '-' && sing != '*' && sing != '/' && sing != '=');
+            if (sing != '=') {
+                System.out.println("Введите второе число >");
+                number2 = scanner.nextInt();
+
+                switch (sing) {
+                    case '+':
+                        result = result + number2;
+                        break;
+                    case '-':
+                        result = result - number2;
+                        break;
+                    case '*':
+                        result = result * number2;
+                        break;
+                    case '/':
+                        result = result / number2;
+                        break;
+                    default:
+                        //System.out.println("Operator" + " "+ sing + "dont use");
+                }
+            }
+
+        }
+        while (sing != '=');
+        {
+            System.out.println("Результат ваший действий: " + " " + "=" + " " + result);
+        }*/
+
+        // Нарисовать равнобедренный треугольник из символов "пробел" и "^".
+        // Высоту (кол-во уровней) вводит пользователь.
+        // Например: если высота = 5, на экране должно получиться
+
+        Scanner scanner = new Scanner(System.in);
+        int n;
+        do {
+            System.out.println("Введите высоту количество уровней:");
+            n = scanner.nextInt();
+        } while (n < 2 || n > 20);
+
+        for (int i =0; i <= n; i++)
+        {
+            for (int j =0; j <=n+ i; j ++)
+            {
+                if (j <= (n - i + 1))
+                {
+                    System.out.print(" ");
+                    //Thread.sleep(500);
+                }
+                else
+                {
+                    System.out.print("^");
+                    //Thread.sleep(500);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
